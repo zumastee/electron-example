@@ -1,6 +1,6 @@
-# Electron Hello World Example
+# Electron Examples
 
-This repository demonstrates basic desktop applications using Electron.js.
+This repository demonstrates various desktop applications using Electron.js.
 
 ## Project Structure
 
@@ -17,6 +17,13 @@ electron-example/
 │   ├── renderer.js     # Renderer process logic
 │   ├── styles.css      # CSS with dark/light mode support
 │   └── package.json    # Project configuration
+├── device-access/      # Device access examples
+│   └── web-bluetooth/  # Web Bluetooth API example
+│       ├── index.html  # App UI
+│       ├── main.js     # Main process
+│       ├── preload.js  # Preload script
+│       ├── renderer.js # Renderer process logic
+│       └── package.json# Project configuration
 └── package-lock.json   # Dependency lock file
 ```
 
@@ -43,6 +50,10 @@ npm install
 # For the dark-mode example
 cd ../dark-mode
 npm install
+
+# For the web-bluetooth example
+cd ../device-access/web-bluetooth
+npm install
 ```
 
 ## Running the Applications
@@ -58,6 +69,13 @@ npm start
 
 ```bash
 cd electron-example/dark-mode
+npm start
+```
+
+### Web Bluetooth Example
+
+```bash
+cd electron-example/device-access/web-bluetooth
 npm start
 ```
 
@@ -80,6 +98,14 @@ This application demonstrates how to implement dark mode toggle in Electron:
 - `renderer.js` - Contains event listeners for theme buttons
 - `styles.css` - CSS with media queries for dark/light mode
 
+### Web Bluetooth Example
+This application demonstrates how to access Bluetooth devices from Electron:
+
+- `main.js` - Sets up the Electron app with necessary Bluetooth permissions
+- `preload.js` - Exposes necessary APIs to the renderer process
+- `index.html` - Defines the UI for Bluetooth interaction
+- `renderer.js` - Contains Bluetooth discovery and connection logic
+
 ## Customization
 
 These sample applications can be customized by:
@@ -94,6 +120,7 @@ These sample applications can be customized by:
 - [Electron Quick Start](https://www.electronjs.org/docs/latest/tutorial/quick-start)
 - [Electron API Demo](https://www.electronjs.org/docs/latest/api/app)
 - [Electron Dark Mode Guide](https://www.electronjs.org/docs/latest/tutorial/dark-mode)
+- [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API)
 
 ## License
 
